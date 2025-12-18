@@ -32,6 +32,10 @@ ALLOWED_HOSTS = os.environ.get(
     'localhost,127.0.0.1,foodmenu-5.onrender.com'
 ).split(',')
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://foodmenu-5.onrender.com'
+]
+
 
 
 # Application definition
