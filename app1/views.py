@@ -24,7 +24,8 @@ def fis(request):
 
     return render(request, 'app1/fis.html', {'form': form})
 
-
+def home(request):
+    return render(request,'home.html')
 def update(request,sno):
     s=Root.objects.get(sno=sno)
     form=RootForm(instance=s)
