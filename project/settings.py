@@ -25,9 +25,13 @@ SECRET_KEY = 'django-insecure-u*gv68of7b%0kc)#4+$u+8l9@r2_fsx8f$x@=j8up1)lv!!h1a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'foodmenu-5.onrender.com',
-]
+import os
+
+ALLOWED_HOSTS = os.environ.get(
+    'ALLOWED_HOSTS',
+    'localhost,127.0.0.1,foodmenu-5.onrender.com'
+).split(',')
+
 
 
 # Application definition
